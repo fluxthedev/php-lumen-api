@@ -110,15 +110,6 @@ $app->register(Illuminate\Mail\MailServiceProvider::class);
 |
 */
 
-$app->configure('mail');
-$app->alias('mailer', Illuminate\Mail\Mailer::class);
-$app->alias('mailer', Illuminate\Contracts\Mail\Mailer::class);
-$app->alias('mailer', Illuminate\Contracts\Mail\MailQueue::class);
-
-$app->configure('jwt');
-
-$app->register(Tymon\JWTAuth\Providers\LumenServiceProvider::class);
-
 $app->router->group([
   'namespace' => 'App\Http\Controllers',
 ], function ($router) {
